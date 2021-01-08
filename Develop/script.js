@@ -10,10 +10,30 @@ function writePassword() {
 }
 
 function generatePassword() {
-  var pwlength = parseInt(prompt('How many chars?'));
-  console.log(typeof pwlength);
-  console.log();
+  for (var i = 1; i < 2;) {
+  var pwlength = parseInt(prompt('How many chars? (please input a number between 8 and 128)'));
+  if (pwlength < 8) {
+    alert('Password must be at least 8 chars');
+  }
+  else if (pwlength > 128) {
+    alert('Password must be less than 128 chars');
+   }
+   else { i++
+   }
+  }
+  var pwlowercase = confirm('Use lowercase letters?');
+  var pwuppercase = confirm('Use uppercase letters?');
+  var pwnumbers = confirm('Use numbers?');
+  var pwspecialchars = confirm('Use special characters?');
+  console.log(pwlength);
+  console.log(pwlowercase);
+  console.log(pwuppercase);
+  console.log(pwnumbers);
+  console.log(pwspecialchars);
 }
+
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
