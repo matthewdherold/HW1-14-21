@@ -21,15 +21,21 @@ function generatePassword() {
    else { i++
    }
   }
-  var pwlowercase = confirm('Use lowercase letters?');
-  var pwuppercase = confirm('Use uppercase letters?');
-  var pwnumbers = confirm('Use numbers?');
-  var pwspecialchars = confirm('Use special characters?');
+  console.log('Password length:');
   console.log(pwlength);
+  var pwlowercase = confirm('Use lowercase letters?');
+  console.log('Lowercase?:');
   console.log(pwlowercase);
+  var pwuppercase = confirm('Use uppercase letters?');
+  console.log('Uppercase?:');
   console.log(pwuppercase);
+  var pwnumbers = confirm('Use numbers?');
+  console.log('Numbers?:');
   console.log(pwnumbers);
+  var pwspecialchars = confirm('Use special characters?');
+  console.log('Special characters?:');
   console.log(pwspecialchars);
+  
 }
 
 
