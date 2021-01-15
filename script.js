@@ -46,42 +46,34 @@ function generatePassword() {
 
   if (pwlowercase === true) {
     pwCharSet += lowerSet;
-    console.log(pwCharSet);
     password += lowerSet.charAt(Math.random() * lowerSet.length);
-    console.log(password);
     criteriaSet + 1;
   }
   if (pwuppercase === true) {
     pwCharSet += upperSet;
-    console.log(pwCharSet);
     password += upperSet.charAt(Math.random() * upperSet.length);
-    console.log(password);
     criteriaSet + 1;
   }
   if (pwnumbers === true) {
     pwCharSet += numberSet;
-    console.log(pwCharSet);
     password += numberSet.charAt(Math.random() * numberSet.length);
-    console.log(password);
     criteriaSet + 1;
   }
   if (pwspecialchars === true) {
     pwCharSet += specSet;
-    console.log(pwCharSet);
     password += specSet.charAt(Math.random() * specSet.length);
-    console.log(password);
     criteriaSet + 1;
   }
-  
+  console.log('All possible characters:')
+  console.log(pwCharSet);
+
   for (var i = criteriaSet, n = pwCharSet.length; i < pwLength; ++i) {
     password += pwCharSet.charAt(Math.random() * n);
 }
-  console.log(password);
+console.log('Generated password:')
+console.log(password);
       
-
-
   return password;
-  
 }
 
 
