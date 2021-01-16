@@ -38,11 +38,12 @@ function generatePassword() {
   console.log(pwspecialchars);
 
   var pwCharSet = "";
-  var lowerSet = "abcdefghijklmnopqrstuvwxyz"
+  var lowerSet = "abcdefghijklmnopqrstuvwxyz";
   var upperSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var numberSet = "0123456789"
-  var specSet = "!#$%&*+,-./:;<=>?@^_~"
-  var criteriaSet = 0
+  var numberSet = "0123456789";
+  var specSet = "!#$%&*+,-./:;<=>?@^_~";
+  var criteriaSet = 0;
+  var passwordFinal = "";
 
   if (pwlowercase === true) {
     pwCharSet += lowerSet;
@@ -70,7 +71,17 @@ function generatePassword() {
   for (var i = criteriaSet, n = pwCharSet.length; i < pwLength; ++i) {
     password += pwCharSet.charAt(Math.random() * n);
 }
-console.log('Generated password:')
+
+console.log('Pre-shuffled password:');
+console.log(password);
+
+for (var i = 0; i < password.length; i++) {
+  passwordFinal += password.charAt(Math.random() * password.length)
+  
+}
+password = passwordFinal;
+
+console.log('Final password:');
 console.log(password);
       
   return password;
